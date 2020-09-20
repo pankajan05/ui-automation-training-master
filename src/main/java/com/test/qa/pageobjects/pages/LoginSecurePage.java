@@ -24,7 +24,7 @@ public class LoginSecurePage extends PageBase {
         return getDriver().findElement(loginAlert).isDisplayed();
     }
 
-    public static String isLoginAlertMessage() {
+    public static String getLoginAlertMessage() {
         return getDriver().findElement(loginAlert).getText();
     }
 

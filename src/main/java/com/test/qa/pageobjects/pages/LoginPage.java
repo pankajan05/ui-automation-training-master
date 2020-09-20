@@ -38,7 +38,7 @@ public class LoginPage extends PageBase {
         return getDriver().findElement(logoutAlert).isDisplayed();
     }
 
-    public static String isLogOutAlertMessage() {
+    public static String getLogOutAlertMessage() {
         return getDriver().findElement(logoutAlert).getText();
     }
 }
