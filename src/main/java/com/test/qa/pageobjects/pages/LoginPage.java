@@ -11,6 +11,8 @@ import com.test.qa.pageobjects.utils.PageBase;
  */
 public class LoginPage extends PageBase {
     private static By hdrLogin = By.className("example");
+    private static By logoutAlert = By.id("flash-messages");
+    private static By logoutAlertMessage = By.id("flash");
     private static By txtUsername = By.id("username");
     private static By txtPassword = By.id("password");
     private static By btnSubmit = By.className("radius");
@@ -29,5 +31,13 @@ public class LoginPage extends PageBase {
 
     public static boolean isLoginPageDisplayed() {
         return getDriver().findElement(hdrLogin).isDisplayed();
+    }
+
+    public static boolean isLogoutAlertDisplayed() {
+        return getDriver().findElement(logoutAlert).isDisplayed();
+    }
+
+    public static boolean isLogOutAlertMessageDisplayed() {
+        return getDriver().findElement(logoutAlertMessage).isDisplayed();
     }
 }
