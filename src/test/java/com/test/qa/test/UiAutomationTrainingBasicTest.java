@@ -159,7 +159,8 @@ public class UiAutomationTrainingBasicTest extends TestBase {
 		softAssert = new SoftAssert();
 		softAssert.assertTrue(HomePage.isHomePageDisplayed(), "Home Page is not Displayed");
 		HomePage.clickLink(Constants.LOGIN_LINK);
-
+		LoginPage.setTxtEmail(Constants.LOGIN_USER_NAME);
+		LoginPage.setTxtPassword(Constants.LOGIN_PASSWORD);
 		softAssert.assertAll();
 	}
 
