@@ -38,7 +38,8 @@ public class TestBase {
 	}
 
 	@BeforeMethod
-	public void beforeMethod() {
+	public void beforeMethod()
+	{
 		softAssert = new SoftAssert();
 	}
 
