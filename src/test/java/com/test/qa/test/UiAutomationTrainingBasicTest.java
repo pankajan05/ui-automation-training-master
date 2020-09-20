@@ -163,12 +163,12 @@ public class UiAutomationTrainingBasicTest extends TestBase {
 		LoginPage.setTxtPassword(Constants.LOGIN_PASSWORD);
 		LoginPage.clickSubmit();
 		softAssert.assertTrue(LoginSecurePage.isLoginSecurePageDisplayed(), "Login Secure Page is not Displayed");
-		softAssert.assertEquals(LoginSecurePage.isLoginAlertDisplayed(), "Login Alert is not Displayed");
-		softAssert.assertEquals(LoginSecurePage.isLoginAlertMessageDisplayed(), "Login  Alert Message Content is not Displayed");
+		softAssert.assertTrue(LoginSecurePage.isLoginAlertDisplayed(),"Login Alert is not Displayed");
+		softAssert.assertTrue(LoginSecurePage.isLoginAlertMessage().contains(Constants.LOGIN_SUCCESS_MSG), "Login  Alert Message Content is not Displayed");
 		LoginSecurePage.clickLogout();
-		softAssert.assertEquals(LoginPage.isLoginPageDisplayed(), "Login Page is not Displayed");
-		softAssert.assertEquals(LoginPage.isLogoutAlertDisplayed(), "Logout Alert is not Displayed");
-		softAssert.assertEquals(LoginPage.isLogOutAlertMessageDisplayed(), "Logout  Alert Message Content is not Displayed");
+		softAssert.assertTrue(LoginPage.isLoginPageDisplayed(), "Login Page is not Displayed");
+		softAssert.assertTrue(LoginPage.isLogoutAlertDisplayed(), "Logout Alert is not Displayed");
+		softAssert.assertTrue(LoginPage.isLogOutAlertMessage().contains(Constants.LOGOUT_SUCCESS_MSG), "Logout  Alert Message Content is not Displayed");
 		softAssert.assertAll();
 	}
 

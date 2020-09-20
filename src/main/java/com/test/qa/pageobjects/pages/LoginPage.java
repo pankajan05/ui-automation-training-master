@@ -10,9 +10,10 @@ import com.test.qa.pageobjects.utils.PageBase;
  * on 10/3/2018.
  */
 public class LoginPage extends PageBase {
+    private static final Logger LOGGER = Logger.getLogger(HomePage.class);
+
     private static By hdrLogin = By.className("example");
-    private static By logoutAlert = By.id("flash-messages");
-    private static By logoutAlertMessage = By.id("flash");
+    private static By logoutAlert = By.id("flash");
     private static By txtUsername = By.id("username");
     private static By txtPassword = By.id("password");
     private static By btnSubmit = By.className("radius");
@@ -37,7 +38,7 @@ public class LoginPage extends PageBase {
         return getDriver().findElement(logoutAlert).isDisplayed();
     }
 
-    public static boolean isLogOutAlertMessageDisplayed() {
-        return getDriver().findElement(logoutAlertMessage).isDisplayed();
+    public static String isLogOutAlertMessage() {
+        return getDriver().findElement(logoutAlert).getText();
     }
 }
