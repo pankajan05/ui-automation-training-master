@@ -168,9 +168,9 @@ public class UiAutomationTrainingBasicTest extends TestBase {
 		softAssert.assertTrue(LoginSecurePage.getLoginAlertMessage().contains(Constants.LOGIN_SUCCESS_MSG), "Login  Alert Message Content is not Displayed");
 		LoginSecurePage.clickLogout();
 		softAssert.assertTrue(LoginPage.isLoginPageDisplayed(), "Login Page is not Displayed");
-		softAssert.assertTrue(LoginPage.isLogoutAlertDisplayed(), "Logout Alert is not Displayed");
+		softAssert.assertTrue(LoginPage.isAlertDisplayed(), "Logout Alert is not Displayed");
 		//when use the assert equal by comparing the result. The result have the new line corrector so it make fail the test case
-		softAssert.assertTrue(LoginPage.getLogOutAlertMessage().contains(Constants.LOGOUT_SUCCESS_MSG), "Logout  Alert Message Content is not Displayed");
+		softAssert.assertTrue(LoginPage.getAlertMessage().contains(Constants.LOGOUT_SUCCESS_MSG), "Logout  Alert Message Content is not Displayed");
 		softAssert.assertAll();
 	}
 
@@ -192,6 +192,8 @@ public class UiAutomationTrainingBasicTest extends TestBase {
 		LoginPage.setTxtEmail("pankajan");
 		LoginPage.setTxtPassword("sabinaya");
 		LoginPage.clickSubmit();
+		softAssert.assertTrue(LoginPage.isAlertDisplayed(), "Logout Alert is not Displayed");
+		softAssert.assertTrue(LoginPage.getAlertMessage().contains(Constants.LOGIN_INVALID_MSG), "Logout  Alert Message Content is not Displayed");
 		softAssert.assertAll();
 	}
 }

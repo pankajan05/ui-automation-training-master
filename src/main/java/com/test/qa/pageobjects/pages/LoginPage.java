@@ -34,11 +34,11 @@ public class LoginPage extends PageBase {
         return getDriver().findElement(hdrLogin).isDisplayed();
     }
 
-    public static boolean isLogoutAlertDisplayed() {
+    public static boolean isAlertDisplayed() {
         return getDriver().findElement(logoutAlert).isDisplayed();
     }
 
-    public static String getLogOutAlertMessage() {
+    public static String getAlertMessage() {
         return getDriver().findElement(logoutAlert).getText();
     }
 }
