@@ -11,8 +11,13 @@ import com.test.qa.pageobjects.utils.PageBase;
  */
 public class LoginSecurePage extends PageBase {
     private static By hdrWelcome = By.linkText(" Secure Area");
+    private static By loginAlert = By.id("flash");
 
     public static boolean isLoginSecurePageDisplayed() {
         return getDriver().findElement(hdrWelcome).isDisplayed();
+    }
+
+    public static boolean isLoginAlertDisplayed() {
+        return getDriver().findElement(loginAlert).isDisplayed();
     }
 }
