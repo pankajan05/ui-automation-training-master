@@ -10,4 +10,9 @@ import com.test.qa.pageobjects.utils.PageBase;
  * SrirankanK on 10/3/2018.
  */
 public class LoginSecurePage extends PageBase {
+    private static By hdrWelcome = By.linkText(" Secure Area");
+
+    public static boolean isLoginSecurePageDisplayed() {
+        return getDriver().findElement(hdrWelcome).isDisplayed();
+    }
 }

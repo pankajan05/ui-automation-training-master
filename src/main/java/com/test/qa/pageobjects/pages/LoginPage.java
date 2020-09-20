@@ -21,4 +21,8 @@ public class LoginPage extends PageBase {
     public static void setTxtPassword(String password) {
         getDriver().findElement(txtPassword).sendKeys(password);
     }
+
+    public static void clickSubmit() {
+        getDriver().findElement(btnSubmit).click();
+    }
 }

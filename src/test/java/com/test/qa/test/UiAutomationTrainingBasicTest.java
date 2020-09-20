@@ -161,6 +161,8 @@ public class UiAutomationTrainingBasicTest extends TestBase {
 		HomePage.clickLink(Constants.LOGIN_LINK);
 		LoginPage.setTxtEmail(Constants.LOGIN_USER_NAME);
 		LoginPage.setTxtPassword(Constants.LOGIN_PASSWORD);
+		LoginPage.clickSubmit();
+		LoginSecurePage.isLoginSecurePageDisplayed();
 		softAssert.assertAll();
 	}
 
