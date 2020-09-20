@@ -155,6 +155,11 @@ public class UiAutomationTrainingBasicTest extends TestBase {
         //Todo - Verify Login Page Displayed
         //Todo - Verify Logout Alert Displayed
         //Todo - Verify Logout  Alert Message Content
+
+		softAssert = new SoftAssert();
+		softAssert.assertTrue(HomePage.isHomePageDisplayed(), "Home Page is not Displayed");
+		HomePage.clickLink(Constants.LOGIN_LINK);
+		softAssert.assertAll();
 	}
 
 	/**
