@@ -159,6 +159,7 @@ public class UiAutomationTrainingBasicTest extends TestBase {
 		softAssert = new SoftAssert();
 		softAssert.assertTrue(HomePage.isHomePageDisplayed(), "Home Page is not Displayed");
 		HomePage.clickLink(Constants.LOGIN_LINK);
+
 		softAssert.assertAll();
 	}
 
@@ -173,5 +174,9 @@ public class UiAutomationTrainingBasicTest extends TestBase {
         //Todo - Click Submit
         //Todo - Verify Invalid Login Alert Displayed
         //Todo - Verify Invalid Login  Alert Message Content
+
+		softAssert = new SoftAssert();
+
+		softAssert.assertAll();
 	}
 }
