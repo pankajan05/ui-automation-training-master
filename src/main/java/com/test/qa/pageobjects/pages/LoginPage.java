@@ -10,12 +10,12 @@ import com.test.qa.pageobjects.utils.PageBase;
  * on 10/3/2018.
  */
 public class LoginPage extends PageBase {
-    private static By txtEmail = By.id("username");
+    private static By txtUsername = By.id("username");
     private static By txtPassword = By.id("password");
     private static By btnSubmit = By.className("radius");
 
-    public static void setTxtEmail(String email) {
-        getDriver().findElement(txtEmail).sendKeys(email);
+    public static void setTxtEmail(String username) {
+        getDriver().findElement(txtUsername).sendKeys(username);
     }
 
     public static void setTxtPassword(String password) {

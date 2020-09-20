@@ -10,8 +10,10 @@ import com.test.qa.pageobjects.utils.PageBase;
  * SrirankanK on 10/3/2018.
  */
 public class LoginSecurePage extends PageBase {
-    private static By hdrWelcome = By.linkText(" Secure Area");
-    private static By loginAlert = By.id("flash");
+    private static By hdrWelcome = By.className("example");
+    private static By loginAlert = By.id("flash-messages");
+    private static By loginAlertMessage = By.id("flash");
+    private static By btnLogout = By.className("button secondary radius");
 
     public static boolean isLoginSecurePageDisplayed() {
         return getDriver().findElement(hdrWelcome).isDisplayed();
@@ -19,5 +21,13 @@ public class LoginSecurePage extends PageBase {
 
     public static boolean isLoginAlertDisplayed() {
         return getDriver().findElement(loginAlert).isDisplayed();
+    }
+
+    public static boolean isLoginAlertMessageDisplayed() {
+        return getDriver().findElement(loginAlertMessage).isDisplayed();
+    }
+
+    public static void clickLogout() {
+        getDriver().findElement(btnLogout).click();
     }
 }
