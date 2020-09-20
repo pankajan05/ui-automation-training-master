@@ -185,7 +185,7 @@ public class UiAutomationTrainingBasicTest extends TestBase {
         //Todo - Verify Invalid Login  Alert Message Content
 
 		softAssert = new SoftAssert();
-
+		softAssert.assertTrue(HomePage.isHomePageDisplayed(), "Home Page is not Displayed");
 		softAssert.assertAll();
 	}
 }
